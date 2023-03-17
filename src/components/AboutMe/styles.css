@@ -1,0 +1,16 @@
+.fade {
+  transition: 1s;
+  animation-duration: 3s;
+  animation-name: fadeIn;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+.profile-pic {
+  margin-bottom: 120px;
+}

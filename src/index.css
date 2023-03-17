@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.standard-submit {
+  border: none;
+  height: 1.5rem;
+  width: 5rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.standard-submit:hover {
+  opacity: 50%;
+}
+.standard-submit:active {
+  border: 2px solid black;
+}
+
+.message-container {
+  margin: 5px;
+  width: 14rem;
+  border: 2px solid black;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+ol > li::marker {
+}
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: red;
+}
+.MuiOutlinedInput-input {
+  border: none;
+}
+.custom.MuiOutlinedInput-root.Mui-focused {
+  border-color: red;
+}
