@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { useState } from "react";
-import goose from "../../imgs/unnamed.jpg";
+import goose from "../../imgs/goose2.jpg";
 import "./styles.css";
 
 function AboutMe() {
@@ -9,7 +9,7 @@ function AboutMe() {
     display: "flex",
     gap: "5px",
     flexDirection: "column",
-    alignItems: "center"
+    alignItems: "center",
   };
 
   const ran = Math.floor(Math.random(0, 1) * 10000);

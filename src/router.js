@@ -16,6 +16,9 @@ import ProgressBar from "./components/ProgressBar/ProgressBar";
 import ToolTips from "./components/ToolTips/ToolTips";
 import ErrorPage from "./components/ErrorPage/ErrorPage";
 import ImgGen from "./components/OpenAI/ImgGen";
+import StartPage from "./components/SCP.Pages/StartPage/StartPage";
+import IntroductionPage from "./components/SCP.Pages/SCP.Intro/IntroductionPage";
+import MainPage from "./components/SCP.Pages/SCP.MainPage/MainPage";
 
 export const router = createBrowserRouter([
   {
@@ -36,8 +39,20 @@ export const router = createBrowserRouter([
       { path: "Slider", element: <Sliders /> },
       { path: "Progress-Bar", element: <ProgressBar /> },
       { path: "Tool-Tips", element: <ToolTips /> },
-      { path: "OpenAI", element: <ImgGen /> }
+      { path: "OpenAI", element: <ImgGen /> },
     ],
-    errorElement: <ErrorPage />
-  }
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/SCP",
+    element: <StartPage />,
+  },
+  {
+    path: "/SCP/Introduction",
+    element: <IntroductionPage />,
+  },
+  {
+    path: "/SCP/MainPage",
+    element: <MainPage />,
+  },
 ]);

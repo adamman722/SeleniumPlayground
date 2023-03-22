@@ -1,0 +1,252 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+/* comment soemthin */
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  color: #61dafb;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+body {
+  background-image: url();
+  background-repeat: no-repeat;
+  background-size: 500px 500px;
+  background-color: black;
+}
+
+#backgroundImg {
+  align-items: center;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes Start-Entry {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(720deg) scale(200);
+  }
+}
+#specialImgTagForNav {
+  z-index: 5;
+  width: 50px;
+  height: 50px;
+
+  animation: Main-App-logo-spin infinite 20s linear;
+  opacity: 50%;
+}
+@keyframes backgroundImage {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes Main-Start-Entry {
+  from {
+    transform: rotate(0deg) scale(200);
+  }
+  to {
+    transform: rotate(720deg);
+  }
+}
+@keyframes Main-App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#startScreenButton {
+  border-radius: 10px;
+}
+
+/* Start  of glitched button */
+/* I can re use the glitched affect for some other buttons later on */
+.glitched-affect,
+.glitched-affect:after {
+  width: 150px;
+  height: 76px;
+  line-height: 78px;
+  font-size: 25px;
+  font-family: "Bebas Neue", sans-serif;
+  background: linear-gradient(253deg, transparent 5%, #ffffff 5%);
+  border: 0;
+  color: rgb(0, 0, 0);
+  letter-spacing: 3px;
+  cursor: pointer;
+  outline: transparent;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.glitched-affect:after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+
+  content: "RUN AWAY!";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    253deg,
+    transparent 3%,
+    #000000 3%,
+    #000000 5%,
+    #000000 5%
+  );
+  color: #ffffff;
+  text-shadow: -3px -3px 0px #ffffff, 3px 3px 0px #88130f;
+  clip-path: var(--slice-0);
+}
+
+.glitched-affect:hover:after {
+  animation: 1.5s glitch infinite;
+
+  animation-timing-function: steps(2, end);
+}
+@keyframes closeGraident {
+  0% {
+    background: linear-gradient(253deg, transparent 5%, #ffffff 5%);
+  }
+
+  10% {
+    background: linear-gradient(253deg, transparent 10%, #ffffff 5%);
+  }
+  20% {
+    background: linear-gradient(253deg, transparent 20%, #ffffff 5%);
+  }
+  30% {
+    background: linear-gradient(253deg, transparent 30%, #ffffff 5%);
+  }
+  40% {
+    background: linear-gradient(253deg, transparent 40%, #ffffff 5%);
+  }
+  50% {
+    background: linear-gradient(253deg, transparent 50%, #ffffff 5%);
+  }
+  60% {
+    background: linear-gradient(253deg, transparent 60%, #ffffff 5%);
+  }
+  70% {
+    background: linear-gradient(253deg, transparent 70%, #ffffff 5%);
+  }
+  80% {
+    background: linear-gradient(253deg, transparent 80%, #ffffff 5%);
+  }
+  90% {
+    background: linear-gradient(253deg, transparent 90%, #ffffff 5%);
+  }
+  100% {
+    background: linear-gradient(253deg, transparent 100%, #ffffff 5%);
+  }
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .glitched-affect,
+  .glitched-affect:after {
+    width: 500px;
+    height: 86px;
+    line-height: 88px;
+  }
+}
+/* End  of glitched button */
+
+/* Start of typewriter effects */
+.typewriter1 {
+  font-size: 50px;
+  padding-top: 300px;
+}
+
+.typewriter2 {
+  font-size: 50px;
+  padding-top: 50px;
+}

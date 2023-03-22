@@ -25,7 +25,7 @@ import GridViewIcon from "@mui/icons-material/GridView";
 
 import ListItemText from "@mui/material/ListItemText";
 import { Outlet, Link } from "react-router-dom";
-import imgIguess from "../../imgs/uwm_logo.svg";
+import imgIguess from "../../imgs/United_Wholesale_Unleashed.png";
 import "../../App.css";
 
 const drawerWidth = 270;
@@ -36,34 +36,34 @@ const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })(
     padding: theme.spacing(3),
     transition: theme.transitions.create("margin", {
       easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen
+      duration: theme.transitions.duration.leavingScreen,
     }),
     marginLeft: `-${drawerWidth}px`,
     ...(open && {
       transition: theme.transitions.create("margin", {
         easing: theme.transitions.easing.easeOut,
-        duration: theme.transitions.duration.enteringScreen
+        duration: theme.transitions.duration.enteringScreen,
       }),
-      marginLeft: 0
-    })
+      marginLeft: 0,
+    }),
   })
 );
 
 const AppBar = styled(MuiAppBar, {
-  shouldForwardProp: (prop) => prop !== "open"
+  shouldForwardProp: (prop) => prop !== "open",
 })(({ theme, open }) => ({
   transition: theme.transitions.create(["margin", "width"], {
     easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.leavingScreen
+    duration: theme.transitions.duration.leavingScreen,
   }),
   ...(open && {
     width: `calc(100% - ${drawerWidth}px)`,
     marginLeft: `${drawerWidth}px`,
     transition: theme.transitions.create(["margin", "width"], {
       easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen
-    })
-  })
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+  }),
 }));
 
 const DrawerHeader = styled("div")(({ theme }) => ({
@@ -72,7 +72,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
   padding: theme.spacing(0, 1),
   // necessary for content to be below app bar
   ...theme.mixins.toolbar,
-  justifyContent: "flex-end"
+  justifyContent: "flex-end",
 }));
 
 export default function PersistentDrawerLeft() {
@@ -92,7 +92,7 @@ export default function PersistentDrawerLeft() {
     <InboxIcon sx={{ color: "white" }} />,
     <DownloadIcon sx={{ color: "white" }} />,
     <GamepadIcon sx={{ color: "white" }} />,
-    <GridViewIcon sx={{ color: "white" }} />
+    <GridViewIcon sx={{ color: "white" }} />,
   ];
   return (
     <Box sx={{ display: "flex" }}>
@@ -130,9 +130,9 @@ export default function PersistentDrawerLeft() {
             "-ms-overflow-style": "none",
             scrollbarWidth: "none",
             "&::-webkit-scrollbar": {
-              display: "none"
-            }
-          }
+              display: "none",
+            },
+          },
         }}
         variant="persistent"
         anchor="left"
@@ -142,7 +142,8 @@ export default function PersistentDrawerLeft() {
           sx={{
             backgroundImage: `url(${imgIguess})`,
             backgroundRepeat: "no-repeat",
-            backgroundPosition: "center"
+            backgroundPosition: "center",
+            backgroundSize: "cover",
           }}
         >
           <nav role="navigation" aria-label="Mobile Menu">
@@ -167,7 +168,7 @@ export default function PersistentDrawerLeft() {
             "Transfer-list",
             "Upload-Download",
             "Buttons",
-            "DataGrid"
+            "DataGrid",
           ].map((text, index) => (
             <Link
               to={text}

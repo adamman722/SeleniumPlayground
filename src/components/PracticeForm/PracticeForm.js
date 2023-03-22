@@ -18,36 +18,36 @@ import "./formStyles.css";
 //styled components
 const StyledInput = styled(TextField)(({ theme }) => ({
   "& label.Mui-focused": {
-    color: "Black"
+    color: "Black",
   },
   "& .MuiOutlinedInput-root": {
     "& fieldset": {
-      borderColor: theme.palette.brand.orange
+      borderColor: theme.palette.brand.orange,
     },
     "&:hover fieldset": {
-      borderColor: theme.palette.brand.orange
+      borderColor: theme.palette.brand.orange,
     },
     "&.Mui-focused fieldset": {
-      borderColor: theme.palette.brand.orange
-    }
-  }
+      borderColor: theme.palette.brand.orange,
+    },
+  },
 }));
 
 const StyledAutoComplete = styled(Autocomplete)(({ theme }) => ({
   "& label.Mui-focused": {
-    color: "Black"
+    color: "Black",
   },
   "& .MuiOutlinedInput-root": {
     "& fieldset": {
-      borderColor: theme.palette.brand.orange
+      borderColor: theme.palette.brand.orange,
     },
     "&:hover fieldset": {
-      borderColor: theme.palette.brand.orange
+      borderColor: theme.palette.brand.orange,
     },
     "&.Mui-focused fieldset": {
-      borderColor: theme.palette.brand.orange
-    }
-  }
+      borderColor: theme.palette.brand.orange,
+    },
+  },
 }));
 
 const StyledButton = styled(Button)(({ theme }) => ({
@@ -57,8 +57,8 @@ const StyledButton = styled(Button)(({ theme }) => ({
   "&:hover": {
     border: "none",
     backgroundColor: theme.palette.brand.orange,
-    opacity: "75%"
-  }
+    opacity: "75%",
+  },
 }));
 //End of Styled components
 
@@ -91,7 +91,7 @@ function PracticeForm() {
     selectedState: null,
     selectedCity: null,
     fileDataURL: null,
-    form: {}
+    form: {},
   });
 
   //all potential error states
@@ -101,7 +101,7 @@ function PracticeForm() {
     emailError: false,
     genderError: false,
     phoneNumberError: false,
-    DOBError: false
+    DOBError: false,
   });
 
   //grabbing state and city data and formatting it into a state
@@ -123,7 +123,7 @@ function PracticeForm() {
         return {
           ...prev,
           cities: statesCities[data.selectedState],
-          isDisabled: false
+          isDisabled: false,
         };
       });
     } else if (data.selectedState === "") {
@@ -180,7 +180,7 @@ function PracticeForm() {
           genderError: false,
           emailError: false,
           lNameError: false,
-          fNameError: false
+          fNameError: false,
         };
       });
     }
@@ -203,7 +203,7 @@ function PracticeForm() {
     boxShadow:
       "rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px",
     padding: "1rem",
-    marginTop: "1rem"
+    marginTop: "1rem",
   };
   const innerStackRow = { justifyContent: "space-between" };
 
@@ -224,7 +224,7 @@ function PracticeForm() {
     "Spanish or other foreign language",
     "Leadership",
     "Speech",
-    "Reading"
+    "Reading",
   ];
 
   return (
@@ -237,7 +237,11 @@ function PracticeForm() {
               <Typography variant="h6">Name</Typography>
               <Stack
                 direction="row"
-                sx={{ width: "400px", justifyContent: "space-between" }}
+                sx={{
+                  width: "400px",
+                  justifyContent: "space-between",
+                  gap: "10px",
+                }}
               >
                 <StyledInput
                   type="text"
@@ -534,7 +538,7 @@ function PracticeForm() {
               color: "green",
               position: "relative",
               left: "-80px",
-              top: "7px"
+              top: "7px",
             }}
           />
         )}

@@ -2,6 +2,7 @@ import React from "react";
 import { Button, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { Stack } from "@mui/system";
+import { useNavigate } from "react-router-dom";
 
 const StyledButton = styled(Button)(({ theme }) => ({
   border: "none",
@@ -10,19 +11,23 @@ const StyledButton = styled(Button)(({ theme }) => ({
   "&:hover": {
     border: "none",
     backgroundColor: theme.palette.brand.orange,
-    opacity: "75%"
-  }
+    opacity: "75%",
+  },
 }));
-function promptFunc() {
-  prompt("Please enter your name:", "");
-}
-function alertFunc() {
-  alert("HEY SOMETHING HAPPENED");
-}
-function confirmFunc() {
-  window.confirm("Ummmmm you need to confirm this plz");
-}
 function Alerts() {
+  const navigate = useNavigate();
+  function promptFunc() {
+    let name = prompt("Please enter your name:", "");
+    if (name === "O5-1") {
+      navigate("/SCP");
+    }
+  }
+  function alertFunc() {
+    alert("HEY SOMETHING HAPPENED");
+  }
+  function confirmFunc() {
+    window.confirm("Ummmmm you need to confirm this plz");
+  }
   return (
     <Stack direction="row" spacing={2}>
       <StyledButton onClick={alertFunc}>Alert</StyledButton>
