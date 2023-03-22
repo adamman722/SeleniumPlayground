@@ -19,6 +19,7 @@ import ImgGen from "./components/OpenAI/ImgGen";
 import StartPage from "./components/SCP.Pages/StartPage/StartPage";
 import IntroductionPage from "./components/SCP.Pages/SCP.Intro/IntroductionPage";
 import MainPage from "./components/SCP.Pages/SCP.MainPage/MainPage";
+import SCPLanding from "./components/SCP.Pages/SCP.MainPage/LandingPage/SCP.Landing";
 
 export const router = createBrowserRouter([
   {
@@ -54,5 +55,6 @@ export const router = createBrowserRouter([
   {
     path: "/SCP/MainPage",
     element: <MainPage />,
+    children: [{ path: "Landing", element: <SCPLanding /> }],
   },
 ]);

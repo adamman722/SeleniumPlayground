@@ -32,7 +32,7 @@ function IntroductionPage() {
     setColor({ color: "#000000" });
   }, 13000);
   setTimeout(() => {
-    navigate("/SCP/MainPage");
+    navigate("/SCP/MainPage/Landing");
   }, 14000);
   return (
     <div style={color} className="App">
